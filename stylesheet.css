@@ -70,7 +70,7 @@ nav ul li a {
 .inner-content {
     width: 80%;
     margin: auto;
-    text-align: center;
+    text-align: justify;
 }
 
 .content {
@@ -90,6 +90,7 @@ nav ul li a {
 }
 
 .button {
+    text-align: center;
     color: #333;
     height: 7vh;
     border-radius: 10px;
@@ -104,6 +105,63 @@ nav ul li a {
     cursor: pointer;
 }
 .button:active {
+    background: #777;
+    color: #fff;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h5 {
+    font-size: 7rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+img {
+    min-width: 80vw;
+    min-height: 80vh;
+    max-width: 90vw;
+    max-height: 90vh;
+    margin: auto;
+}
+
+.invisible {
+    display: none;
+}
+
+.rules {
+    padding-left: 30px;
+    line-height: 1.5rem;
+}
+
+.start-test {
+    text-align: center;
+    color: #ddd;
+    border: solid #ddd;
+    height: 7vh;
+    border-radius: 10px;
+    font-size: 2rem;
+    min-width: 15vw;
+    margin: auto;
+    margin-top: 5vh;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.active {
+    color: #333;
+    border: solid #333;
+}
+.active:hover {
+    background: #ddd;
+    cursor: pointer;
+}
+.active:active {
     background: #777;
     color: #fff;
     cursor: pointer;

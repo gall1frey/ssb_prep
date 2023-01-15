@@ -10,6 +10,7 @@ $(window).scroll(function(){
     }
 });
 
+// click button to navigate to test
 $('.button').click(function(e){
     window.location.href='tests/'+e.target.id+'.html';
 })
