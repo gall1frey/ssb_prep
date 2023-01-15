@@ -1,4 +1,4 @@
-*, body {
+*, body, html {
     font-family: 'Roboto Slab', serif;
     margin: 0;
     padding: 0;
@@ -76,7 +76,6 @@ nav ul li a {
     width: 80%;
     margin: auto;
     text-align: justify;
-    overflow: scroll;
 }
 
 .content {
