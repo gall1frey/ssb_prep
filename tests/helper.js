@@ -13,6 +13,8 @@ const tat_dir = '../resources/tat/';
 const wat_file = '../resources/wat.js';
 const srt_file = '../resources/srt.js';
 
+var darkMode = false;
+
 /*
 ===============================================================
                         Helper Functions
@@ -31,6 +33,15 @@ window.matchMedia('(display-mode: fullscreen)').addEventListener('change', ({ ma
         console.log('not fullscreen!');
     }
 });
+
+// Dark Mode
+$('#darkmodetoggle').change(function() {
+    if ($('#darkmodetoggle').is(':checked')) {
+        darkMode = true;
+    } else {
+        darkMode = false;
+    }
+})
 
 // Get a random image from directory
 function getImg(dir, idx) {
@@ -69,6 +80,7 @@ function getRandomNos(max_num,samplesize) {
 */
 $('#start-ppdt').click(function(e) {
     $('#ppdt-rules').addClass('invisible');
+    if (darkMode) $('#ppdt-test').addClass('dark');
     $('#ppdt-test').removeClass('invisible');
     idx = Math.floor(Math.random() * (num_ppdt-1));
     setTimeout(function() {displayImg(getImg(ppdt_dir,idx),$('#ppdt-test'))}, 5000);
@@ -85,6 +97,7 @@ $('#start-ppdt').click(function(e) {
 */
 $('#start-tat').click(function(e) {
     $('#tat-rules').addClass('invisible');
+    if (darkMode) $('#tat-test').addClass('dark');
     $('#tat-test').removeClass('invisible');
     imgs = getRandomNos(num_tat,11);
     imgs.push('blank');
@@ -103,6 +116,7 @@ $('#start-tat').click(function(e) {
 */
 $('#start-wat').click(function(e) {
     $('#wat-rules').addClass('invisible');
+    if (darkMode) $('#wat-test').addClass('dark');
     $('#wat-test').removeClass('invisible');
     wrds = getRandomNos(num_wat,60);
     for (let i = 0; i < wrds.length; i++) {
@@ -121,6 +135,7 @@ $('#start-wat').click(function(e) {
 */
 $('#start-srt').click(function(e) {
     $('#srt-rules').addClass('invisible');
+    if (darkMode) $('#srt-test').addClass('dark');
     $('#srt-test').removeClass('invisible');
     sits = getRandomNos(num_srt,60);
     for (let i = 0; i < sits.length; i++) {
@@ -139,6 +154,7 @@ $('#start-srt').click(function(e) {
 */
 $('#start-sd').click(function(e) {
     $('#sd-rules').addClass('invisible');
+    if (darkMode) $('#sd-test').addClass('dark');
     $('#sd-test').removeClass('invisible');
     setTimeout(playAlert, 30*1000*60+5000);
 });
