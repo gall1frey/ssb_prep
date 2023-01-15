@@ -4,10 +4,10 @@
 ===============================================================
 Update these every time new pictures and stuff are added
 */
-const num_ppdt = 1;
-const num_tat = 11;
-const num_wat = 60;
-const num_srt = 60;
+const num_ppdt = 10;
+const num_tat = 15;
+const num_wat = 578;
+const num_srt = 76;
 const ppdt_dir = '../resources/ppdt/';
 const tat_dir = '../resources/tat/';
 const wat_file = '../resources/wat.js';
@@ -122,9 +122,10 @@ $('#start-wat').click(function(e) {
 $('#start-srt').click(function(e) {
     $('#srt-rules').addClass('invisible');
     $('#srt-test').removeClass('invisible');
-    sits = getRandomNos(num_wat,60);
+    sits = getRandomNos(num_srt,60);
     for (let i = 0; i < sits.length; i++) {
         setTimeout(function() {
+            console.log(sits[i]);
             $('#instruction').html('<h1>'+situations[sits[i]]+'</h1>')
         }, (30*1000)*i+5000);
     }
