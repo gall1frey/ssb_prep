@@ -61,7 +61,6 @@ function removeImage(loc_query) {
 // TODO: Implement function to play alert sound
 function playAlert() {
     // TODO: FILL THIS
-    location.reload();
 }
 
 // Get tat images
@@ -119,12 +118,24 @@ $('#start-wat').click(function(e) {
     if (darkMode) $('#wat-test').addClass('dark');
     $('#wat-test').removeClass('invisible');
     wrds = getRandomNos(num_wat,60);
+    words = []
+    for (let i = 0; i < wrds.length; i++) words.push(wat_words[wrds[i]])
     for (let i = 0; i < wrds.length; i++) {
         setTimeout(function() {
-            $('#instruction').html('<h5>'+wat_words[wrds[i]]+'</h5>')
+            $('#instruction').html('<h5>'+words[i]+'</h5>')
         }, (15*1000)*i+5000);
     }
     setTimeout(playAlert, 15*1000*60+5000);
+    setTimeout(function() {
+        $('#wat-test').addClass('invisible');
+        $('#wat-quest').removeClass('invisible');
+        html = '<ol>';
+        for (let i = 0; i < words.length; i++) {
+            html += "<li>" + words[i]+ "</li>";
+        }
+        html += '</ol>';
+        $('#questions').html(html);
+    }, 15*1000*60+5000);
 });
 
 
@@ -138,13 +149,25 @@ $('#start-srt').click(function(e) {
     if (darkMode) $('#srt-test').addClass('dark');
     $('#srt-test').removeClass('invisible');
     sits = getRandomNos(num_srt,60);
+    allsits = [];
+    for(let i = 0; i < sits.length; i++) allsits.push(situations[sits[i]])
     for (let i = 0; i < sits.length; i++) {
         setTimeout(function() {
             console.log(sits[i]);
-            $('#instruction').html('<h1>'+situations[sits[i]]+'</h1>')
+            $('#instruction').html('<h1>'+allsits[i]+'</h1>')
         }, (30*1000)*i+5000);
     }
     setTimeout(playAlert, 30*1000*60+5000);
+    setTimeout(function() {
+        $('#srt-test').addClass('invisible');
+        $('#srt-quest').removeClass('invisible');
+        html = '<ol>';
+        for (let i = 0; i < allsits.length; i++) {
+            html += "<li>" + allsits[i]+ "</li>";
+        }
+        html += '</ol>';
+        $('#questions').html(html);
+    }, 30*1000*60+5000);
 });
 
 /*
