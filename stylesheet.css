@@ -120,6 +120,12 @@ h5 {
     text-align: center;
 }
 
+h4 {
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: justify;
+}
+
 img {
     min-width: 80vw;
     min-height: 80vh;
@@ -134,7 +140,8 @@ img {
 
 .rules {
     padding-left: 30px;
-    line-height: 1.5rem;
+    line-height: 2rem;
+    font-size: 1.5rem;
 }
 
 .start-test {
@@ -165,4 +172,8 @@ img {
     background: #777;
     color: #fff;
     cursor: pointer;
+}
+
+ol li {
+    line-height: 5rem;
 }

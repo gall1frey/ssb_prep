@@ -7,7 +7,7 @@ Update these every time new pictures and stuff are added
 const num_ppdt = 1;
 const num_tat = 11;
 const num_wat = 60;
-const num_srt = 1;
+const num_srt = 60;
 const ppdt_dir = '../resources/ppdt/';
 const tat_dir = '../resources/tat/';
 const wat_file = '../resources/wat.js';
@@ -111,4 +111,33 @@ $('#start-wat').click(function(e) {
         }, (15*1000)*i+5000);
     }
     setTimeout(playAlert, 15*1000*60+5000);
+});
+
+
+/*
+===============================================================
+                        SRT Test Code
+===============================================================
+*/
+$('#start-srt').click(function(e) {
+    $('#srt-rules').addClass('invisible');
+    $('#srt-test').removeClass('invisible');
+    sits = getRandomNos(num_wat,60);
+    for (let i = 0; i < sits.length; i++) {
+        setTimeout(function() {
+            $('#instruction').html('<h1>'+situations[sits[i]]+'</h1>')
+        }, (30*1000)*i+5000);
+    }
+    setTimeout(playAlert, 30*1000*60+5000);
+});
+
+/*
+===============================================================
+                        SD Test Code
+===============================================================
+*/
+$('#start-sd').click(function(e) {
+    $('#sd-rules').addClass('invisible');
+    $('#sd-test').removeClass('invisible');
+    setTimeout(playAlert, 30*1000*60+5000);
 });
