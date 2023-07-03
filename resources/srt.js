@@ -32,7 +32,7 @@ situations = [
     'While patrolling at unit man gate, a terrorist fired at his leg and bleeding started badly and he is snatching his rifle. He…',
     'While on leave he heard radio and announcement about outbreak of WAR. He…',
     'In field area, he was short of manpower; one of his jawans asks for the leave on wrong excuse which he knows is false. He…',
-    'He is already late to complete his task. His colleges refund to co-operate with him. He…',
+    'He is already late to complete his task. His colleages refuse to co-operate with him. He…',
     'While returning from picnic, it starts getting dark and he has lost his way. He…',
     'When his Boss does not agree with his views. He…',
     'He works hard because…',

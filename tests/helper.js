@@ -6,7 +6,7 @@ Update these every time new pictures and stuff are added
 */
 const num_ppdt = 21;
 const num_tat = 15;
-const num_wat = 676;
+const num_wat = 675;
 const num_srt = 76;
 const ppdt_dir = '../resources/ppdt/';
 const tat_dir = '../resources/tat/';
